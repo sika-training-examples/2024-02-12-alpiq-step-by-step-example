@@ -6,3 +6,6 @@ after_script:
 
 job1:
   script: echo Job1
+
+job2:
+  script: echo Job2
