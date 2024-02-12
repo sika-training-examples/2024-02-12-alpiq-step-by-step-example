@@ -1,0 +1,13 @@
+{
+  "name": "ondrejsika-step-by-step",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitlab.sikademo.com:demo-group/ondrejsika-step-by-step.git",
+  "author": "Ondrej Sika <ondrej@ondrejsika.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
