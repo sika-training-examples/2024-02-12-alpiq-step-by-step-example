@@ -1,13 +1,13 @@
+stages:
+  - stage1
+  - stage2
+
 job1:
+  stage: stage1
   script:
-    - echo deploy!
     - echo test!
-  after_script:
-    - echo $CI_JOB_STATUS
 
 job2:
+  stage: stage2
   script:
     - echo deploy!
-    - echo test! && false
-  after_script:
-    - echo $CI_JOB_STATUS
