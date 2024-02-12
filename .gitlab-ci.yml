@@ -1,14 +1,8 @@
-# .gitlab-ci.yml
+before_script:
+  - echo Global before
 
-stages:
-  - test
+after_script:
+  - echo Global after
 
-test1:
-  stage: test
-  script: echo Test1!
-
-test2:
-  stage: test
-  script: echo Test2!
-  needs:
-    - test1
+job1:
+  script: echo Job1
