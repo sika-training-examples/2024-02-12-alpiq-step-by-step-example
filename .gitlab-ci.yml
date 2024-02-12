@@ -1,2 +1,3 @@
 test:
-  script: env
+  script:
+    - echo $CI_PROJECT_PATH_SLUG-CI_COMMIT_REF_SLUG.k8s-dev.sikademo.com
