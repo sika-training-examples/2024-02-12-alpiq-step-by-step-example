@@ -4,7 +4,9 @@ variables:
   XXX_GLOBAL: global
 
 job1:
-  script: env | grep XXX
+  script:
+    - env | grep XXX
+    - cat $XXX_PROJECT_FILE
 
 job2:
   variables:
