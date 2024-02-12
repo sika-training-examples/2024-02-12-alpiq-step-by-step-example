@@ -1,8 +1,7 @@
-before_script:
-  - echo Global before
+image: alpine
 
-after_script:
-  - echo Global after
+before_script:
+  - apk add curl
 
 job1:
   script: curl https://counter-backend.sikademo.com/
