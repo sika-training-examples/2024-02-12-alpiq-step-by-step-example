@@ -1,8 +1,8 @@
 # .gitlab-ci.yml
 
-pipeline_a:
+pipeline_c:
   trigger:
-    include: a/.gitlab-ci.yml
+    include: c/.gitlab-ci.yml
     strategy: depend
 
 pipeline_b:
