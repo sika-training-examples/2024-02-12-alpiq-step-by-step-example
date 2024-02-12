@@ -1,5 +1,2 @@
-image: sikalabs/ci
-
 test:
-  script: slu chaos-monkey random-status-code
-  retry: 2
+  script: env
