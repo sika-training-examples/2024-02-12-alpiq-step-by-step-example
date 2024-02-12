@@ -1,2 +1,3 @@
-triger-pipelines:
-  trigger: demo-group/mygitproject
+include:
+  - project: demo-group/gitlab-ci
+    file: '/terraform/terraform.gitlab-ci.yml'
