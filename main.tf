@@ -15,3 +15,11 @@ resource "random_pet" "foo" {
 output "foo" {
   value = random_pet.foo.id
 }
+
+resource "random_pet" "bar" {
+  length = 4
+}
+
+output "bar" {
+  value = random_pet.bar.id
+}
