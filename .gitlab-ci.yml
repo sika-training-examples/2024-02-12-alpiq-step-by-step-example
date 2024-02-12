@@ -4,7 +4,4 @@ before_script:
   - apk add curl
 
 job1:
-  script: curl https://counter-backend.sikademo.com/
-
-job2:
-  script: curl https://counter-backend.sikademo.com/
+  script: curl -fsSL https://counter-backend.sikademo.com/
