@@ -1,2 +1,3 @@
 include:
-  - remote: https://gitlab.sikademo.com/demo-group/gitlab-ci/-/raw/main/hello/hello.gitlab-ci.yml
+  - project: 'demo-group/gitlab-ci'
+    file: '/hello/hello.gitlab-ci.yml'
