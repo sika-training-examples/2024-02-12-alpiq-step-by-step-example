@@ -1,3 +1,17 @@
-include:
-  - project: 'demo-group/gitlab-ci'
-    file: '/hello/hello.gitlab-ci.yml'
+# .gitlab-ci.yml
+
+pipeline_a:
+  trigger:
+    include: a/.gitlab-ci.yml
+    strategy: depend
+  rules:
+    - changes:
+        - a/**
+
+pipeline_b:
+  trigger:
+    include: b/.gitlab-ci.yml
+    strategy: depend
+  rules:
+    - changes:
+        - b/**
