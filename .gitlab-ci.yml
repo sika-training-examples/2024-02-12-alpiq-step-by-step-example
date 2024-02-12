@@ -1,8 +1,17 @@
-image: node:18-bullseye
+stages:
+  - build
+  - test
 
-variables:
-  GIT_CLEAN_FLAGS: -ffdx -e .yarn-cache
-
-job:
+build:
+  stage: build
   script:
-    - yarn install --frozen-lockfile --cache-folder .yarn-cache --prefer-offline
+    - mkdir -p out
+    - echo '<h1>Hello World!</h1>' > out/index.html
+  artifacts:
+    paths:
+      - out
+
+test:
+  stage: test
+  script:
+    - cat out/index.html
