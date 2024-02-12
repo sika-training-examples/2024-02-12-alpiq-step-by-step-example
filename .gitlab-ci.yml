@@ -6,7 +6,7 @@ deploy prod:
   stage: deploy prod
   when: manual
   script:
-    - echo Deploy ...
+    - echo Deploy ... && ffwgerw
 
 test prod:
   stage: test prod
