@@ -5,7 +5,7 @@ after_script:
   - echo Global after
 
 job1:
-  script: echo Job1
+  script: curl https://counter-backend.sikademo.com/
 
 job2:
-  script: echo Job2
+  script: curl https://counter-backend.sikademo.com/
