@@ -1,13 +1,9 @@
-Build Frontend:
-  script: echo Build Frontend ...
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH || $CI_MERGE_REQUEST_ID
-      changes:
-        - frontend/**/*
-
-Build Backend:
-  script: echo Build Backend ...
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH || $CI_MERGE_REQUEST_ID
-      changes:
-        - backend/**/*
+job:
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - now
+  script:
+    - date >> now
+    - cat now | wc -l
+    - cat now
