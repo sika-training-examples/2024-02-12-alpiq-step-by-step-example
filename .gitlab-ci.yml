@@ -1,21 +1,43 @@
+# .gitlab-ci.yml
+
 stages:
-  - pre
   - build
   - test
-  - post
+  - deploy
 
-pre:
-  stage: pre
-  script: echo Pre ...
-
-build:
+linux build:
   stage: build
-  script: echo Build!
+  script: sleep 10 && echo Done
 
-test:
+mac build:
+  stage: build
+  script: sleep 20 && echo Done
+
+lint:
   stage: test
-  script: echo Test!
+  script: echo Done
 
-post:
-  stage: post
-  script: echo Post ...
+linux unit tests:
+  stage: test
+  script: echo Done
+
+linux e2e tests:
+  stage: test
+  script: sleep 10 && echo Done
+
+mac unit tests:
+  stage: test
+  script: sleep 5 && echo Done
+
+mac e2e tests:
+  stage: test
+  script: sleep 30 && echo Done
+
+release linux:
+  stage: deploy
+  script: "echo Done"
+
+
+release mac:
+  stage: deploy
+  script: "echo Done"
