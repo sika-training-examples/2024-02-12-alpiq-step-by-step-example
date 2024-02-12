@@ -1,14 +1,13 @@
-# .gitlab-ci.yml
-
 job1:
   script:
     - echo deploy!
-    - echo test! && false
-    - echo cleanup!
+    - echo test!
+  after_script:
+    - echo $CI_JOB_STATUS
 
 job2:
   script:
     - echo deploy!
     - echo test! && false
   after_script:
-    - echo cleanup!
+    - echo $CI_JOB_STATUS
