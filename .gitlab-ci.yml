@@ -1,9 +1,8 @@
 image: node:18-bullseye
 
+variables:
+  GIT_CLEAN_FLAGS: -ffdx -e .yarn-cache
+
 job:
-  cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-      - .yarn-cache
   script:
     - yarn install --frozen-lockfile --cache-folder .yarn-cache --prefer-offline
