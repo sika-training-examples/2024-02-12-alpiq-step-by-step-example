@@ -5,7 +5,7 @@ stages:
 job1:
   stage: stage1
   script:
-    - echo test!
+    - ecfrwt
 
 job2:
   stage: stage2
