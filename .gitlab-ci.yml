@@ -1,16 +1,4 @@
-stages:
-  - deploy prod
-  - test prod
+image: sikalabs/ci
 
-deploy prod:
-  stage: deploy prod
-  when: manual
-  allow_failure: false
-  # allow_failure: true
-  script:
-    - echo Deploy ...
-
-test prod:
-  stage: test prod
-  script:
-    - echo Test ...
+test:
+  script: slu chaos-monkey random-status-code
