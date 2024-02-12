@@ -8,7 +8,7 @@ deploy prod:
   allow_failure: false
   # allow_failure: true
   script:
-    - echo Deploy ... && false
+    - echo Deploy ...
 
 test prod:
   stage: test prod
