@@ -3,7 +3,7 @@ stages:
   - test
 
 pre:
-  stage: .pre
+  stage: pre
   script: echo Pre ...
 
 build:
@@ -15,5 +15,5 @@ test:
   script: echo Test!
 
 post:
-  stage: .post
+  stage: post
   script: echo Post ...
