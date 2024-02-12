@@ -1,5 +1,9 @@
 # .gitlab-ci.yml
 
+always:
+  script:
+    - echo always
+
 push:
   rules:
     - if: $CI_PIPELINE_SOURCE == "push"
