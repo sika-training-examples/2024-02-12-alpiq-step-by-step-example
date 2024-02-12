@@ -1,6 +1,8 @@
 stages:
+  - pre
   - build
   - test
+  - post
 
 pre:
   stage: pre
